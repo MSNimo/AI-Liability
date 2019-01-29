@@ -15,6 +15,6 @@ app.use(express.static(path.join(__dirname, '')));
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/', function(req, res){
-  res.render('index');
+  res.render('index'); 
 });
 

@@ -21,6 +21,7 @@
 *.zip
 
 # Directories #
+###############
 node_modules/
 
 # Logs and databases #

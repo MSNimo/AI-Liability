@@ -1,0 +1,28 @@
+{
+  "name": "AI Liability",
+  "version": "1.0.0",
+  "description": "AI Liability Decision Tree for Mayer Brown",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSNimo/AI-Liability.git"
+  },
+  "author": "Michael Benimovich, Lily Barghi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MSNimo/AI-Liability/issues"
+  },
+  "homepage": "https://github.com/MSNimo/AI-Liability#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "fs": "latest",
+    "http": "latest",
+    "npm": "^6.7.0",
+    "path": "latest"
+  }
+}

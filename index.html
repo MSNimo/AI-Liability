@@ -114,6 +114,11 @@
                     </b-card>
                 </div>
             </b-container>
+            <template>
+                    <div>
+                        <div v-for="data in myJson">{{data}}</div>
+                    </div>
+            </template>
 
             <b-form-group horizontal :label-cols="4" description="Let us know your name." label="Enter your name">
                 <b-form-input v-model.trim="name"></b-form-input>
@@ -128,6 +133,15 @@
 
     <!-- Start running your app -->
     <script>
+        
+        import json from "data/decision-tree.json";
+        export default{
+          data(){
+              return{
+                  myJson: json
+              }
+          }
+        }
 
         window.app = new Vue({
             el: "#app",
@@ -139,8 +153,9 @@
                     return this.name.length > 4 ? true : false;
                 }
             }
+            
         })
-
+        
     </script>
 
 </body>

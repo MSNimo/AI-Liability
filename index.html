@@ -19,12 +19,40 @@
     <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
 </head>
 
+<style>
+    .mb-2 {
+
+        margin: 0 auto; 
+        float: none; 
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-width: 20rem;
+        text-align: center;
+    }
+
+    .button-container {
+
+        display: block;
+    }
+
+    .decision-tree-option {
+
+        margin: 0 auto; 
+        float: both; 
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 75%;
+        
+    }
+</style>
+
 <body>
 
     <!-- Our application root element -->
     <div id="app">
 
         <b-container>
+            <!-- Navbar Start -->
             <b-navbar toggleable="md" type="dark" variant="info">
 
                 <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
@@ -65,24 +93,27 @@
 
                 </b-collapse>
             </b-navbar>
+            <!-- Navbar End-->
         </b-container>
         <b-container>
             <b-container>
                 <div>
-                    <b-card title="Card Title" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image"
-                        img-top tag="article" style="max-width: 20rem;" class="mb-2">
-                        <p class="card-text">
+                    <b-card title="Card Title" class="mb-2">
+                        <!--<p class="card-text">
                             Some quick example text to build on the card title and make up the bulk of the card's
                             content.
-                        </p>
-                        <b-btn href="#" variant="primary">Go somewhere</b-btn>
+                        </p>-->
+                        <b-container class="button-container">
+                            
+                            <b-row><b-btn href="#" class = "decision-tree-option" variant="primary">Bank</b-btn></b-row>
+                            <b-row><b-btn href="#" class = "decision-tree-option" variant="primary">Vendor</b-btn></b-row>
+                            <b-row><b-btn href="#" class = "decision-tree-option" variant="primary">Vendor's Vendor</b-btn></b-row>
+                            <b-row><b-btn href="#" class = "decision-tree-option" variant="primary">Customer of a Bank</b-btn></b-row>
+                            <b-row><b-btn href="#" class = "decision-tree-option" variant="primary">A Third Party</b-btn></b-row>
+                        </b-container>
                     </b-card>
                 </div>
             </b-container>
-            <b-jumbotron header="Bootstrap Vue" lead="Bootstrap 4 Components for Vue.js 2">
-                <p>For more information visit our website</p>
-                <b-btn variant="primary" href="https://bootstrap-vue.js.org/">More Info</b-btn>
-            </b-jumbotron>
 
             <b-form-group horizontal :label-cols="4" description="Let us know your name." label="Enter your name">
                 <b-form-input v-model.trim="name"></b-form-input>
@@ -97,6 +128,7 @@
 
     <!-- Start running your app -->
     <script>
+
         window.app = new Vue({
             el: "#app",
             data: {
@@ -108,6 +140,7 @@
                 }
             }
         })
+
     </script>
 
 </body>

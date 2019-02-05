@@ -1,5 +1,5 @@
 {
-  "name": "AI Liability",
+  "name": "AI-Liability",
   "version": "1.0.0",
   "description": "AI Liability Decision Tree for Mayer Brown",
   "main": "server.js",
@@ -23,9 +23,7 @@
     "fs": "latest",
     "http": "latest",
     "npm": "^6.7.0",
+    "package.json": "^2.0.1",
     "path": "latest"
   }
 }
-
-
- 

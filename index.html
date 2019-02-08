@@ -100,37 +100,26 @@
         <b-container>
             <b-container>
                 <div>
-                    <b-card title="Card Title" class="mb-2">
+                    <b-card id="tree-card" :title="myJson.question" class="mb-2">
                         <!--<p class="card-text">
                             Some quick example text to build on the card title and make up the bulk of the card's
                             content.
                         </p>-->
-                        <b-container class="button-container">
+                        <b-container class="button-container" v-for="answer in myJson.children" :key="myJson.label">
 
                             <b-row>
-                                <b-btn href="#" class="decision-tree-option" variant="primary">Bank</b-btn>
+                                <b-btn v-on:click="myJson=answer" class="decision-tree-option" variant="primary">{{answer.label}}</b-btn>
                             </b-row>
-                            <b-row>
-                                <b-btn href="#" class="decision-tree-option" variant="primary">Vendor</b-btn>
-                            </b-row>
-                            <b-row>
-                                <b-btn href="#" class="decision-tree-option" variant="primary">Vendor's Vendor</b-btn>
-                            </b-row>
-                            <b-row>
-                                <b-btn href="#" class="decision-tree-option" variant="primary">Customer of a Bank</b-btn>
-                            </b-row>
-                            <b-row>
-                                <b-btn href="#" class="decision-tree-option" variant="primary">A Third Party</b-btn>
-                            </b-row>
+                           
                         </b-container>
                     </b-card>
                 </div>
             </b-container>
-            <template>
+            <!--<template>
                 <div>
                     <div v-for="data in myJson">{{data}}</div>
                 </div>
-            </template>
+            </template>-->
 
             <b-form-group horizontal :label-cols="4" description="Let us know your name." label="Enter your name">
                 <b-form-input v-model.trim="name"></b-form-input>

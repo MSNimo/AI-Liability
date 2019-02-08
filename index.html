@@ -46,6 +46,10 @@
         width: 75%;
         
     }
+
+    #navbar, .decision-tree-option {
+        background-color:#005A8E !important; 
+    }
 </style>
 
 <body>
@@ -55,7 +59,7 @@
 
         <b-container>
             <!-- Navbar Start -->
-            <b-navbar toggleable="md" type="dark" variant="info">
+            <b-navbar id="navbar" toggleable="md" type="dark" variant="info">
 
                 <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
@@ -113,8 +117,7 @@
                     <div v-for="data in myJson">{{data}}</div>
                 </div>
             </template>-->
-<!--
-            <b-form-group horizontal :label-cols="4" description="Let us know your name." label="Enter your name">
+            <!--<b-form-group horizontal :label-cols="4" description="Let us know your name." label="Enter your name">
                 <b-form-input v-model.trim="name"></b-form-input>
             </b-form-group>
 

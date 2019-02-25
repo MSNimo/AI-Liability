@@ -67,9 +67,10 @@
         background-size: cover;
         padding: 10px;
     }
+
     .jumbotronHR {
         border-color: white;
-        margin-top: 0em !important; 
+        margin-top: 0em !important;
         margin-bottom: 16px !important;
     }
 </style>
@@ -81,14 +82,20 @@
 
         <b-container>
             <b-jumbotron class="jumbotron" text-variant="white" border-variant="dark">
-                <template slot="header" href="https://msnimo.com/AI-Liability/">LANA</template>
+
+                <template slot="header" href="https://msnimo.com/AI-Liability/">
+                    <div>
+                        <b-img src="images\logo_color.jpg" right height="25" alt="Mayer Brown Logo" />
+                    </div>
+                    LANA
+                </template>
+
                 <template slot="lead">
                     Liability for Artificial Networks Assistant
                 </template>
                 <hr class="jumbotronHR" />
-
                 <p>
-                    Artificial Intelligence sanctions screening system. 
+                    Artificial Intelligence sanctions screening system.
                 </p>
             </b-jumbotron>
         </b-container>
@@ -117,7 +124,16 @@
                         </b-row>
                     </b-container>
                 </b-card>
+                <!--button for modal-->
+                <b-button center class="w3-bar-item w3-button" v-b-modal="'contactInfo'">Need Additional Info?</b-button>
             </div>
+            <!--modal for contant info-->
+            <b-modal ref="contactInfoRef" id="contactInfo" size="sm" title="Contact Info">
+                <b-container fluid>
+                    <!--TODO ADD INFO HERE -->
+                </b-container>
+            </b-modal>
+
         </b-container>
     </div>
 

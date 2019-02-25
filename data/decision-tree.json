@@ -1,167 +1,136 @@
 {
     "label": null,
-    "question": "Who are you?",
-    "children": [
-     {
-      "label": "Bank",
-      "question": "What Went Wrong?",
-      "children": [
-       {
-        "label": "False positive (the AI system permitted a transaction to sactioned party that it should have blocked or rejected)",
-        "question": "Who was injured?",
-        "children": [
-         {
-            "label": "The Bank",
-            "question": "What is the nature of the injury?",
-            "children": [
-            {
-                "label": "The Bank is Civily Liable to the Government.",
-                "question": "What claims does the injury give rise to?",
-                "children": null
-              },
-              {
-                "label": "The Bank is Civily Liable to a Third Party.",
-                "question": "What claims does the injury give rise to?",
-                "children": null
-              },
-              {
-                "label": "The Bank's System did not Perform as Advertised by the Vendor.",
-                "question": "What claims does the injury give rise to?",
-                "children": null
-              },
-              {
-                "label": "The Bank is Criminally Liable to the Government.",
-                "question": "What claims does the injury give rise to?",
-                "children": null
-              }
-              ]
-         },
-         {
-            "label": "A Bank's Customer",
-            "question": "What is the nature of the injury?",
-            "children": [
-            {
-                "label": "Is there any way a bank customer could be injured if the transaction was sent/received as intended?",
-                "question": "What claims does the injury give rise to?",
-                "children": null
-            }
-            ]
-         },
-         {
-            "label": "The Government",
-            "question": "What is the nature of the injury?",
-            "children": [
-            {
-                "label": "A Regulatory Violation.",
-                "question": "What claims does the injury give rise to?",
-                "children": null
-            },
-            {
-                "label": "A Criminal Violation.",
-                "question": "What claims does the injury give rise to?",
-                "children": null
-            },
-            {
-                "label": "Other.",
-                "question": "What claims does the injury give rise to?",
-                "children": null
-            }
-            ]
-         },
-         {
-            "label": "A Third Party",
-            "question": "What is the nature of the injury?",
-            "children": [
-            {
-                "label": "Victim of Terrorism by the Entity that Wrongfully Received Funds.",
-                "question": "What claims does the injury give rise to?",
-                "children": null
-            }
-            ]
-         }
-        ]
-       },
-       {
-        "label": "False negative (the AI system wrongly rejected or blocked a transcation that it should have processed)",
-        "question": "Who was injured?",
-        "children": [
-         {
-            "label": "The Bank's Regulator",
-            "question": "What is the nature of the injury?",
-            "children": [
-                {
-                    "label": "Safety and Soundness Issue?",
-                    "question": "What claims does the injury give rise to?",
-                    "children": null
+    "question": "Are you affiliated with a bank?",
+    "children": [{
+            "label": "Yes, I am affiliated with a bank.",
+            "question": "What Went Wrong?",
+            "children": [{
+                    "label": "False positive (the AI system permitted a transaction to sactioned party that it should have blocked or rejected)",
+                    "question": "Who was injured?",
+                    "children": [{
+                            "label": "The Bank",
+                            "question": "What is the nature of the injury?",
+                            "children": [{
+                                    "label": "The Bank is Civily Liable to the Government.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                },
+                                {
+                                    "label": "The Bank is Civily Liable to a Third Party.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                },
+                                {
+                                    "label": "The Bank's System did not Perform as Advertised by the Vendor.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                },
+                                {
+                                    "label": "The Bank is Criminally Liable to the Government.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                }
+                            ]
+                        },
+                        {
+                            "label": "A Bank's Customer",
+                            "question": "What is the nature of the injury?",
+                            "children": [{
+                                "label": "Is there any way a bank customer could be injured if the transaction was sent/received as intended?",
+                                "question": "What claims does the injury give rise to?",
+                                "children": null
+                            }]
+                        },
+                        {
+                            "label": "The Government",
+                            "question": "What is the nature of the injury?",
+                            "children": [{
+                                    "label": "A Regulatory Violation.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                },
+                                {
+                                    "label": "A Criminal Violation.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                },
+                                {
+                                    "label": "Other.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                }
+                            ]
+                        },
+                        {
+                            "label": "A Third Party",
+                            "question": "What is the nature of the injury?",
+                            "children": [{
+                                "label": "Victim of Terrorism by the Entity that Wrongfully Received Funds.",
+                                "question": "What claims does the injury give rise to?",
+                                "children": null
+                            }]
+                        }
+                    ]
                 },
                 {
-                    "label": "Model Validation Issue?",
-                    "question": "What claims does the injury give rise to?",
-                    "children": null
+                    "label": "False negative (the AI system wrongly rejected or blocked a transcation that it should have processed)",
+                    "question": "Who was injured?",
+                    "children": [{
+                            "label": "The Bank's Regulator",
+                            "question": "What is the nature of the injury?",
+                            "children": [{
+                                    "label": "Safety and Soundness Issue?",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                },
+                                {
+                                    "label": "Model Validation Issue?",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                }
+                            ]
+                        },
+                        {
+                            "label": "The Bank",
+                            "question": "What is the nature of the injury?",
+                            "children": [{
+                                    "label": "Government Requires Bank to Improve Systems.  Government Fines Bank.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                },
+                                {
+                                    "label": "AI System is not Performing as Promised by the Vendor.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                }
+                            ]
+                        },
+                        {
+                            "label": "A Non-Customer (Recepient, Third-Party, etc...)",
+                            "question": "What is the nature of the injury?",
+                            "children": [{
+                                "label": "Transaction was Not Timely Received or not Received at All.",
+                                "question": "What claims does the injury give rise to?",
+                                "children": null
+                            }]
+                        },
+                        {
+                            "label": "The Bank's Customer",
+                            "question": "What is the nature of the injury?",
+                            "children": [{
+                                "label": "Transaction was Not Timely Processed or not Processed at All.",
+                                "question": "What claims does the injury give rise to?",
+                                "children": null
+                            }]
+                        }
+                    ]
                 }
-                ]
-           },
-           {
-            "label": "The Bank",
-            "question": "What is the nature of the injury?",
-            "children": [
-                {
-                    "label": "Government Requires Bank to Improve Systems.  Government Fines Bank.",
-                    "question": "What claims does the injury give rise to?",
-                    "children": null
-                },
-                {
-                    "label": "AI System is not Performing as Promised by the Vendor.",
-                    "question": "What claims does the injury give rise to?",
-                    "children": null
-                }
-                ]
-           },
-           {
-            "label": "A Non-Customer (Recepient, Third-Party, etc...)",
-            "question": "What is the nature of the injury?",
-            "children": [
-                {
-                    "label": "Transaction was Not Timely Received or not Received at All.",
-                    "question": "What claims does the injury give rise to?",
-                    "children": null
-                }
-                ]
-           },
-           {
-            "label": "The Bank's Customer",
-            "question": "What is the nature of the injury?",
-            "children": [
-                {
-                    "label": "Transaction was Not Timely Processed or not Processed at All.",
-                    "question": "What claims does the injury give rise to?",
-                    "children": null
-                }
-                ]
-            } 
             ]
-       }
-      ]
-     },
-     {
-      "label": "Vendor",
-      "question": "",
-      "children": null
-     },
-     {
-      "label": "Vendor's Vendor",
-      "question": "",
-      "children": null
-     },
-     {
-      "label": "Customer of the Bank",
-      "question": "",
-      "children": null
-     },
-     {
-      "label": "Government",
-      "question": "",
-      "children": null
-     }
+        },
+        {
+            "label": "No, I am not.",
+            "question": "Sorry, this system may not assist you at this time.",
+            "children": null
+        }
     ]
 }

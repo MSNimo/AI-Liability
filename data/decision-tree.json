@@ -5,7 +5,7 @@
             "label": "Yes, I am affiliated with a bank.",
             "question": "What Went Wrong?",
             "children": [{
-                    "label": "False positive (the AI system permitted a transaction to sactioned party that it should have blocked or rejected)",
+                    "label": "False positive (the AI system permitted a transaction to sanctioned party that it should have blocked or rejected)",
                     "question": "Who was injured?",
                     "children": [{
                             "label": "The Bank",
@@ -73,7 +73,7 @@
                     ]
                 },
                 {
-                    "label": "False negative (the AI system wrongly rejected or blocked a transcation that it should have processed)",
+                    "label": "False negative (the AI system wrongly rejected or blocked a transaction that it should have processed)",
                     "question": "Who was injured?",
                     "children": [{
                             "label": "The Bank's Regulator",

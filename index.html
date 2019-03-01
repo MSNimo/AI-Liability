@@ -22,6 +22,13 @@
 </head>
 
 <style>
+
+    #tree-card {
+
+        max-width:100%;
+        
+    }
+
     .mb-5 {
 
         margin: 0 auto;
@@ -73,7 +80,11 @@
         margin-top: 0em !important;
         margin-bottom: 16px !important;
     }
+    
+    #info-button {
 
+        clear: left;
+    }
     #disclaimer {
         position: fixed;
         text-align: center;
@@ -117,26 +128,47 @@
                 <!--<div class="mb-5">
                         <b-breadcrumb :items ="track"/>
                     </div>-->
-                <b-card id="tree-card" :title="myJson.question" class="mb-5">
-                    <!--<p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                        </p>-->
-                    <b-container class="button-container" v-for="answer in myJson.children" :key="myJson.label">
-
-                        <b-row>
-                            <b-btn @click='addPath(myJson)' v-on:click="myJson=answer" class="decision-tree-option">{{answer.label}}</b-btn>
-                        </b-row>
-
-                    </b-container>
-                    <b-container class="button-container" v-if="myJson.question!='Are you affiliated with a bank?'">
-                        <b-row>
-                            <b-btn @click='myJson = removePath()' v-on:click="" class="decision-tree-back">Back</b-btn>
-                        </b-row>
-                    </b-container>
-                </b-card>
+                <b-row>
+                    <b-col>
+                        <b-card id="tree-card" :title="myJson.question" class="mb-5">
+                                <!--<p class="card-text">
+                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                    content.
+                                </p>-->
+                            <b-container class="button-container" v-for="answer in myJson.children" :key="myJson.label">
+                
+                                <b-row>
+                                    <b-btn @click='addPath(myJson)' v-on:click="myJson=answer" class="decision-tree-option">{{answer.label}}</b-btn>
+                                </b-row>
+                
+                            </b-container>
+                            <b-container class="button-container" v-if="myJson.question!='Are you affiliated with a bank?'">
+                                <b-row>
+                                    <b-btn @click='myJson = removePath()' v-on:click="" class="decision-tree-back">Back</b-btn>
+                                </b-row>
+                            </b-container>
+                        </b-card>
+                    </b-col>
+                    <b-col>
+                        <b-card id="tree-card" :title="myJson.question" class="mb-5">
+                    
+                                <b-container class="button-container" v-for="answer in myJson.children" :key="myJson.label">
+                    
+                                    <b-row>
+                                        <b-btn @click='addPath(myJson)' v-on:click="myJson=answer" class="decision-tree-option">{{answer.label}}</b-btn>
+                                    </b-row>
+                    
+                                </b-container>
+                                <b-container class="button-container" v-if="myJson.question!='Are you affiliated with a bank?'">
+                                    <b-row>
+                                        <b-btn @click='myJson = removePath()' v-on:click="" class="decision-tree-back">Back</b-btn>
+                                    </b-row>
+                                </b-container>
+                            </b-card>
+                        </b-col>
+                </b-row>
                 <!--button for modal-->
-                <b-button center v-b-modal="contactInfo">Need Additional Info?</b-button>
+                <b-button center id="info-button" v-b-modal="'contactInfo'">Need Additional Info?</b-button>
             </div>
             <!--modal for contant info-->
             <b-modal ref="contactInfoRef" id="contactInfo" size="md" title="Contact Info" ok-only>

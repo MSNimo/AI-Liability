@@ -73,6 +73,17 @@
         margin-top: 0em !important;
         margin-bottom: 16px !important;
     }
+
+    #disclaimer {
+        position: fixed;
+        text-align: center;
+        bottom: 0px;
+        width: 100%;
+    }
+
+    html {
+        height: 100%;
+    }
 </style>
 
 <body>
@@ -125,10 +136,10 @@
                     </b-container>
                 </b-card>
                 <!--button for modal-->
-                <b-button center class="w3-bar-item w3-button" v-b-modal="'contactInfo'">Need Additional Info?</b-button>
+                <b-button center v-b-modal="contactInfo">Need Additional Info?</b-button>
             </div>
             <!--modal for contant info-->
-            <b-modal ref="contactInfoRef" id="contactInfo" size="md" title="Contact Info">
+            <b-modal ref="contactInfoRef" id="contactInfo" size="md" title="Contact Info" ok-only>
                 <b-container fluid>
                     <!--TODO ADD INFO HERE -->
                     Please email us at sample@email.com for futher assistance.
@@ -136,6 +147,7 @@
             </b-modal>
 
         </b-container>
+        <p id="disclaimer">Legal disclaimer here.</p>
     </div>
 
     <!-- Start running your app -->

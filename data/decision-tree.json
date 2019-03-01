@@ -6,10 +6,10 @@
             "question": "What Went Wrong?",
             "children": [{
                     "label": "False positive (the AI system permitted a transaction to sanctioned party that it should have blocked or rejected)",
-                    "question": "Who was injured?",
+                    "question": "Who's the complaining party?",
                     "children": [{
                             "label": "The Bank",
-                            "question": "What is the nature of the injury?",
+                            "question": "What is the nature of the complaint?",
                             "children": [{
                                     "label": "The Bank is Civily Liable to the Government.",
                                     "question": "What claims does the injury give rise to?",
@@ -34,7 +34,7 @@
                         },
                         {
                             "label": "A Bank's Customer",
-                            "question": "What is the nature of the injury?",
+                            "question": "What is the nature of the complaint?",
                             "children": [{
                                 "label": "Is there any way a bank customer could be injured if the transaction was sent/received as intended?",
                                 "question": "What claims does the injury give rise to?",
@@ -43,7 +43,7 @@
                         },
                         {
                             "label": "The Government",
-                            "question": "What is the nature of the injury?",
+                            "question": "What is the nature of the complaint?",
                             "children": [{
                                     "label": "A Regulatory Violation.",
                                     "question": "What claims does the injury give rise to?",
@@ -63,7 +63,7 @@
                         },
                         {
                             "label": "A Third Party",
-                            "question": "What is the nature of the injury?",
+                            "question": "What is the nature of the complaint?",
                             "children": [{
                                 "label": "Victim of Terrorism by the Entity that Wrongfully Received Funds.",
                                 "question": "What claims does the injury give rise to?",
@@ -74,10 +74,10 @@
                 },
                 {
                     "label": "False negative (the AI system wrongly rejected or blocked a transaction that it should have processed)",
-                    "question": "Who was injured?",
+                    "question": "Who is the complaining party?",
                     "children": [{
                             "label": "The Bank's Regulator",
-                            "question": "What is the nature of the injury?",
+                            "question": "What is the nature of the complaint?",
                             "children": [{
                                     "label": "Safety and Soundness Issue?",
                                     "question": "What claims does the injury give rise to?",
@@ -92,7 +92,7 @@
                         },
                         {
                             "label": "The Bank",
-                            "question": "What is the nature of the injury?",
+                            "question": "What is the nature of the complaint?",
                             "children": [{
                                     "label": "Government Requires Bank to Improve Systems.  Government Fines Bank.",
                                     "question": "What claims does the injury give rise to?",
@@ -107,7 +107,7 @@
                         },
                         {
                             "label": "A Non-Customer (Recepient, Third-Party, etc...)",
-                            "question": "What is the nature of the injury?",
+                            "question": "What is the nature of the complaint?",
                             "children": [{
                                 "label": "Transaction was Not Timely Received or not Received at All.",
                                 "question": "What claims does the injury give rise to?",
@@ -116,7 +116,7 @@
                         },
                         {
                             "label": "The Bank's Customer",
-                            "question": "What is the nature of the injury?",
+                            "question": "What is the nature of the complaint?",
                             "children": [{
                                 "label": "Transaction was Not Timely Processed or not Processed at All.",
                                 "question": "What claims does the injury give rise to?",

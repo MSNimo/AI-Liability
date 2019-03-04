@@ -28,6 +28,31 @@
 
     }
 
+    .choices-text-q {
+
+        margin: 0;
+        float: left;
+        width: 100%;
+        text-align: left;
+    }
+
+    .choices-text {
+
+        float: left;
+        width: 100%;
+        text-align: left;
+    }
+
+    .mb-6 {
+
+        margin: 0 auto;
+        float: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-width: 50rem;
+        text-align: left;
+    }
+
     .mb-5 {
 
         margin: 0 auto;
@@ -150,17 +175,17 @@
                         </b-card>
                     </b-col>
                     <b-col>
-                        <b-card id="desc-card" title="Past Choices" class="mb-5">
+                        <b-card id="desc-card" title="Past Choices" class="mb-6">
 
                             <b-container class="button-container">
                                 <b-row v-for="selected in track">
-                                    <p>{{selected.label}}</p>
-                                    <p class="font-weight-bold">{{selected.question}}</p>
+                                    <p @click='myJson = JumpBackPathA(selected.label)' class="choices-text-a">{{selected.label}}</p>
+                                    <b-link @click='myJson = JumpBackPathQ(selected.question)' class="font-weight-bold choices-text-q">{{selected.question}}</b-link>
 
                                 </b-row>
                                 <b-row>
-                                    <p>{{myJson.label}}</p>
-                                    <p class="font-weight-bold">{{myJson.question}}</p>
+                                    <p @click='myJson = removePath()' class="choices-text-a">{{myJson.label}}</p>
+                                    <p class="font-weight-bold choices-text-q">{{myJson.question}}</p>
                                 </b-row>
                             </b-container>
                             <!-- <b-container class="button-container" v-for="answer in myJson.children">
@@ -201,9 +226,7 @@
                 name: '',
                 myJson: [],
 
-                track: [
-
-                ]
+                track: []
             },
             methods: {
                 addPath(json) {
@@ -212,7 +235,43 @@
                 removePath() {
 
                     return this.track.pop();
-                }
+                },
+                JumpBackPathQ(target) {
+
+                    len = this.track.length;
+                    spot = -1;
+                    for (i = 0; i < len; i++) {
+                        if (this.track[i].question == target) spot = i;
+                    }
+
+                    if (spot == -1) return myJson;
+
+                    diff = len - spot;
+
+                    for (j = 0; j < diff - 1; j++) this.track.pop();
+
+                    return this.track.pop();
+                },
+
+                JumpBackPathA(target) {
+
+                    len = this.track.length;
+                    spot = -1;
+                    for (i = 0; i < len; i++) {
+                        if (this.track[i].label == target) spot = i;
+                    }
+
+                    if (spot == -1) return myJson;
+
+                    diff = len - spot;
+
+                    for (j = 0; j < diff; j++) this.track.pop();
+
+                    return this.track.pop();
+                },
+
+
+
             },
             computed: {
                 showAlert() {

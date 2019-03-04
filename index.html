@@ -179,7 +179,7 @@
 
                             <b-container class="button-container">
                                 <b-row v-for="selected in track">
-                                    <p @click='myJson = JumpBackPathA(selected.label)' class="choices-text-a">{{selected.label}}</p>
+                                    <p class="choices-text-a">{{selected.label}}</p>
                                     <b-link @click='myJson = JumpBackPathQ(selected.question)' class="font-weight-bold choices-text-q">{{selected.question}}</b-link>
 
                                 </b-row>

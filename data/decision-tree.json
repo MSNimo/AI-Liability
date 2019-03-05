@@ -33,10 +33,10 @@
                             ]
                         },
                         {
-                            "label": "A Bank's Customer",
+                            "label": "The Bank's Client",
                             "question": "What is the nature of the complaint?",
                             "children": [{
-                                "label": "Is there any way a bank customer could be injured if the transaction was sent/received as intended?",
+                                "label": "Is there any way a bank's client could be injured if the transaction was sent/received as intended?",
                                 "question": "What claims does the injury give rise to?",
                                 "children": null
                             }]
@@ -76,7 +76,7 @@
                     "label": "The AI system wrongly blocked a transaction that it should have processed.",
                     "question": "Who is the complaining party?",
                     "children": [{
-                            "label": "The Bank's Regulator",
+                            "label": "The Government",
                             "question": "What is the nature of the complaint?",
                             "children": [{
                                     "label": "Safety and Soundness Issue?",
@@ -106,7 +106,7 @@
                             ]
                         },
                         {
-                            "label": "A Non-Customer (Recepient, Third-Party, etc...)",
+                            "label": "A Non-Client (Recepient, Third-Party, etc...)",
                             "question": "What is the nature of the complaint?",
                             "children": [{
                                 "label": "Transaction was Not Timely Received or not Received at All.",
@@ -115,7 +115,7 @@
                             }]
                         },
                         {
-                            "label": "The Bank's Customer",
+                            "label": "The Bank's Client",
                             "question": "What is the nature of the complaint?",
                             "children": [{
                                 "label": "Transaction was Not Timely Processed or not Processed at All.",

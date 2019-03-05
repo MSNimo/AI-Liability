@@ -5,7 +5,7 @@
             "label": "Yes, I am affiliated with a bank.",
             "question": "What Went Wrong?",
             "children": [{
-                    "label": "The AI system permitted a transaction to sanctioned party that it should have blocked or rejected.",
+                    "label": "The AI system permitted a transaction that it should have blocked.",
                     "question": "Who's the complaining party?",
                     "children": [{
                             "label": "The Bank",
@@ -73,7 +73,7 @@
                     ]
                 },
                 {
-                    "label": "The AI system wrongly rejected or blocked a transaction that it should have processed.",
+                    "label": "The AI system wrongly blocked a transaction that it should have processed.",
                     "question": "Who is the complaining party?",
                     "children": [{
                             "label": "The Bank's Regulator",

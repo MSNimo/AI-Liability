@@ -6,7 +6,7 @@
             "question": "What Went Wrong?",
             "children": [{
                     "label": "The AI system permitted a transaction that it should have blocked.",
-                    "question": "Who's the complaining party?",
+                    "question": "Who is the complaining party?",
                     "children": [{
                             "label": "The Bank",
                             "question": "What is the nature of the complaint?",

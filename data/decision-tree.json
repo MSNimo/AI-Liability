@@ -5,7 +5,7 @@
             "label": "Yes, I am affiliated with a bank.",
             "question": "What Went Wrong?",
             "children": [{
-                    "label": "The AI system permitted a <a class='ui-tooltip' title='tool tip text goes here'><span style='cursor: help;'>Text that you want to show the tooltip when hovered over.</span> transaction </a> that it should have blocked.",
+                    "label": "The AI system permitted a <a class='ui-tooltip' title='definition goes here'><span style='cursor: help;'>transaction</span></a> that it should have blocked.",
                     "question": "Who is the complaining party?",
                     "children": [{
                             "label": "The Bank",

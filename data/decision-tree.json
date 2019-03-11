@@ -6,31 +6,15 @@
             "question": "What Went Wrong?",
             "children": [{
                     "label": "The AI system permitted a transaction that it should have blocked.",
-                    "question": "Who's the complaining party?",
+                    "question": "Who is the complaining party?",
                     "children": [{
                             "label": "The Bank",
                             "question": "What is the nature of the complaint?",
                             "children": [{
-                                    "label": "The Bank is Civily Liable to the Government.",
-                                    "question": "What claims does the injury give rise to?",
-                                    "children": null
-                                },
-                                {
-                                    "label": "The Bank is Civily Liable to a Third Party.",
-                                    "question": "What claims does the injury give rise to?",
-                                    "children": null
-                                },
-                                {
-                                    "label": "The Bank's System did not Perform as Advertised by the Vendor.",
-                                    "question": "What claims does the injury give rise to?",
-                                    "children": null
-                                },
-                                {
-                                    "label": "The Bank is Criminally Liable to the Government.",
-                                    "question": "What claims does the injury give rise to?",
-                                    "children": null
-                                }
-                            ]
+                                "label": "The Bank's System did not Perform as Advertised by the Vendor.",
+                                "question": "What claims does the injury give rise to?",
+                                "children": null
+                            }]
                         },
                         {
                             "label": "The Bank's Client",
@@ -45,7 +29,7 @@
                             "label": "The Government",
                             "question": "What is the nature of the complaint?",
                             "children": [{
-                                    "label": "A Regulatory Violation.",
+                                    "label": "A Civil Violation.",
                                     "question": "What claims does the injury give rise to?",
                                     "children": null
                                 },

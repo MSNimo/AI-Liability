@@ -22,6 +22,13 @@
 </head>
 
 <style>
+
+
+    #logo {
+
+        float: right;
+        padding-right: 2%;
+    }
     #tree-card {
 
         max-width: 100%;
@@ -131,13 +138,12 @@
 
     <!-- Our application root element -->
     <div id="app">
-
-        <b-container>
-            <b-jumbotron class="jumbotron" text-variant="white" border-variant="dark">
+        
+        <b-jumbotron class="jumbotron" text-variant="white" border-variant="dark">
 
                 <template slot="header" href="https://msnimo.com/AI-Liability/">
                     <div>
-                        <b-img src="images\logo_color.jpg" right height="25" alt="Mayer Brown Logo" />
+                        <b-img id="logo" src="images\logo_color.jpg" right height="25" alt="Mayer Brown Logo" />
                     </div>
                     LANA
                 </template>
@@ -147,36 +153,10 @@
                     <hr class="jumbotronHR" />
                     <p class="h6"> Artificial Intelligence sanctions screening system. </p>
                 </div>
-            </b-jumbotron>
-        </b-container>
-
+        </b-jumbotron>
         <b-container>
-
             <div>
-                <!--<div class="mb-5">
-                        <b-breadcrumb :items ="track"/>
-                    </div>-->
                 <b-row>
-                    <b-col>
-                        <b-card id="tree-card" :title="myJson.question" class="mb-5">
-                            <!--<p class="card-text">
-                                    Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.
-                                </p>-->
-                            <b-container class="button-container" v-for="answer in myJson.children">
-
-                                <b-row>
-                                    <b-btn @click='addPath(myJson)' v-on:click="myJson=answer" class="decision-tree-option">{{answer.label}}</b-btn>
-                                </b-row>
-
-                            </b-container>
-                            <b-container class="button-container" v-if="myJson.question!='Are you affiliated with a bank?'">
-                                <b-row>
-                                    <b-btn @click='myJson = removePath()' v-on:click="" class="decision-tree-back">Back</b-btn>
-                                </b-row>
-                            </b-container>
-                        </b-card>
-                    </b-col>
                     <b-col>
                         <b-card id="desc-card" title="Past Choices" class="mb-6">
 
@@ -203,6 +183,26 @@
                                     <b-btn @click='myJson = removePath()' v-on:click="" class="decision-tree-back">Back</b-btn>
                                 </b-row>
                             </b-container> -->
+                        </b-card>
+                    </b-col>
+                    <b-col>
+                        <b-card id="tree-card" :title="myJson.question" class="mb-5">
+                            <!--<p class="card-text">
+                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                    content.
+                                </p>-->
+                            <b-container class="button-container" v-for="answer in myJson.children">
+
+                                <b-row>
+                                    <b-btn @click='addPath(myJson)' v-on:click="myJson=answer" class="decision-tree-option">{{answer.label}}</b-btn>
+                                </b-row>
+
+                            </b-container>
+                            <b-container class="button-container" v-if="myJson.question!='Are you affiliated with a bank?'">
+                                <b-row>
+                                    <b-btn @click='myJson = removePath()' v-on:click="" class="decision-tree-back">Back</b-btn>
+                                </b-row>
+                            </b-container>
                         </b-card>
                     </b-col>
                 </b-row>

@@ -189,7 +189,7 @@
                                     <b-btn @click='addPath(myJson)' v-on:click="myJson=answer" class="decision-tree-option"><span v-html="answer.label"></span></b-btn>
                                 </b-row>
                                 <b-row  v-if="answer.question == null">
-                                    <p><span v-html="answer.label"></span></p>
+                                    <p class="text-justify"><span v-html="answer.label"></span></p>
                                 </b-row>
                             </b-container>
 

@@ -184,16 +184,13 @@
                                     Some quick example text to build on the card title and make up the bulk of the card's
                                     content.
                                 </p>-->
-                            <b-container class="button-container" v-for="answer in myJson.children" v-if="myJson.question != null">
-                                <b-row>
+                            <b-container class="button-container" v-for="answer in myJson.children">
+                                <b-row v-if="answer.question != null">
                                     <b-btn @click='addPath(myJson)' v-on:click="myJson=answer" class="decision-tree-option"><span v-html="answer.label"></span></b-btn>
                                 </b-row>
-                            </b-container>
-
-                            <b-container class="button-container" v-for="answer in myJson.children" v-if="myJson.question == null">
-                                    <b-row>
-                                        <p><span v-html="answer.label"></span></p>
-                                    </b-row>
+                                <b-row  v-if="answer.question == null">
+                                    <p><span v-html="answer.label"></span></p>
+                                </b-row>
                             </b-container>
 
                             <b-container class="button-container" v-if="myJson.question!='Are you affiliated with a bank?'">

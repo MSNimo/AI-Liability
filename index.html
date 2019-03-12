@@ -162,13 +162,13 @@
 
                             <b-container class="button-container">
                                 <b-row v-for="selected in track">
-                                    <p class="choices-text-a">{{selected.label}}</p>
-                                    <b-link @click='myJson = JumpBackPathQ(selected.question)' class="font-weight-bold choices-text-q">{{selected.question}}</b-link>
+                                    <p class="choices-text-a"><span v-html="selected.label"></span></p>
+                                    <b-link @click='myJson = JumpBackPathQ(selected.question)' class="font-weight-bold choices-text-q"><span v-html="selected.question"></span></b-link>
 
                                 </b-row>
                                 <b-row>
-                                    <p class="choices-text-a">{{myJson.label}}</p>
-                                    <p class="font-weight-bold choices-text-q">{{myJson.question}}</p>
+                                    <p class="choices-text-a"> <span v-html="myJson.label"></span></p>
+                                    <p class="font-weight-bold choices-text-q"> <span v-html="myJson.question"></span></p>
                                 </b-row>
                             </b-container>
                             <!-- <b-container class="button-container" v-for="answer in myJson.children">
@@ -194,7 +194,7 @@
                             <b-container class="button-container" v-for="answer in myJson.children">
 
                                 <b-row>
-                                    <b-btn @click='addPath(myJson)' v-on:click="myJson=answer" class="decision-tree-option">{{answer.label}}</b-btn>
+                                    <b-btn @click='addPath(myJson)' v-on:click="myJson=answer" class="decision-tree-option"><span v-html="answer.label"></span></b-btn>
                                 </b-row>
 
                             </b-container>

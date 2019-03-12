@@ -25,18 +25,14 @@
 
 
     #logo {
-
         float: right;
         padding-right: 2%;
     }
     #tree-card {
-
         max-width: 100%;
-
     }
 
     .choices-text-q {
-
         margin: 0;
         float: left;
         width: 100%;
@@ -44,14 +40,12 @@
     }
 
     .choices-text {
-
         float: left;
         width: 100%;
         text-align: left;
     }
 
     .mb-6 {
-
         margin: 0 auto;
         float: none;
         margin-top: 10px;
@@ -61,7 +55,6 @@
     }
 
     .mb-5 {
-
         margin: 0 auto;
         float: none;
         margin-top: 10px;
@@ -71,12 +64,10 @@
     }
 
     .button-container {
-
         display: block;
     }
 
     .decision-tree-option {
-
         margin: 0 auto;
         float: both;
         margin-top: 10px;
@@ -86,7 +77,6 @@
     }
 
     .decision-tree-back {
-
         margin: 0 auto;
         float: both;
         margin-top: 10px;
@@ -114,7 +104,6 @@
     }
 
     #info-button {
-
         clear: left;
     }
 
@@ -195,13 +184,18 @@
                                     Some quick example text to build on the card title and make up the bulk of the card's
                                     content.
                                 </p>-->
-                            <b-container class="button-container" v-for="answer in myJson.children">
-
+                            <b-container class="button-container" v-for="answer in myJson.children" v-if="myJson.question != null">
                                 <b-row>
                                     <b-btn @click='addPath(myJson)' v-on:click="myJson=answer" class="decision-tree-option"><span v-html="answer.label"></span></b-btn>
                                 </b-row>
-
                             </b-container>
+
+                            <b-container class="button-container" v-for="answer in myJson.children" v-if="myJson.question == null">
+                                    <b-row>
+                                        <p><span v-html="answer.label"></span></p>
+                                    </b-row>
+                            </b-container>
+
                             <b-container class="button-container" v-if="myJson.question!='Are you affiliated with a bank?'">
                                 <b-row>
                                     <b-btn @click='myJson = removePath()' v-on:click="" class="decision-tree-back">Back</b-btn>

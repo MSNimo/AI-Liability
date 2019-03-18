@@ -1,8 +1,5 @@
 {
-    "label": null,
-    "question": "Are you affiliated with a bank?",
-    "children": [{
-            "label": "Yes, I am affiliated with a bank.",
+            "label": null,
             "question": "What Went Wrong?",
             "children": [{
                     "label": "The AI system permitted a <a class='ui-tooltip' title='An exchange or interaction between people.'><span style='cursor: help;'>transaction</span></a> that it should have blocked.",
@@ -152,11 +149,4 @@
                     ]
                 }
             ]
-        },
-        {
-            "label": "No, I am not.",
-            "question": "Sorry, this system may not assist you at this time.",
-            "children": null
-        }
-    ]
 }

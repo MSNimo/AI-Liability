@@ -1,0 +1,152 @@
+{
+            "label": null,
+            "question": "What Went Wrong?",
+            "children": [{
+                    "label": "The AI system permitted a <a class='ui-tooltip' title='An exchange or interaction between people.'><span style='cursor: help;'>transaction</span></a> that it should have blocked.",
+                    "question": "Who is the complaining party?",
+                    "children": [{
+                            "label": "The Bank",
+                            "question": "What is the nature of the complaint?",
+                            "children": [{
+                                "label": "The Bank's System did not Perform as Advertised by the Vendor.",
+                                "question": "What claims does the injury give rise to?",
+                                "children": null
+                            }]
+                        },
+                        {
+                            "label": "The Bank's Client",
+                            "question": "What is the nature of the complaint?",
+                            "children": [{
+                                "label": "Is there any way a bank's client could be injured if the transaction was sent/received as intended?",
+                                "question": "What claims does the injury give rise to?",
+                                "children": null
+                            }]
+                        },
+                        {
+                            "label": "The Government",
+                            "question": "What is the nature of the complaint?",
+                            "children": [{
+                                    "label": "A Civil Violation.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": [{
+                                            "label": "Anti Terrorism Act",
+                                            "question": "What is the potential liability?",
+                                            "children": [{
+                                                    "label": "Possible Defense for the Claim under Anti-Terrorism Act: &#10;Lack of the “knowingly” element - The bank is not liable for the injuries caused by AI itself because bank does not satisfy the mental state - “knowingly” element of the liability under Anti-Terrorism Act. Contributory negligence - If AI fails to screen the receiving party is a terrorist because the government does not update the list of terrorists or just negligently fails to notify banks in time, or the programmers forget to update the list or just have not updated it correctly. Then the bank would not be liable for the consequence caused by AI. &#10;Duty of care – If the bank maintains AI carefully with the information provided by government and has done the best to remain it in the best technology status, then the bank is likely off the hook. &#10;Statute of limitations – Statute of Limitation general starts from the damages has occurred. The government might discover the damages when SOL expires, then the bank is likely to use this to defense. ",
+                                                    "question": null,
+                                                    "children": null
+                                            }]
+                                        },
+                                        {
+                                            "label": "IEEPA & TWEA",
+                                            "question": "What is the potential liability?",
+                                            "children": [{
+                                                "label": "Under The International Emergency Economic Powers Act, A civil penalty may be imposed on any person who commits an unlawful act described in subsection &#10;(a) in an amount not to exceed the greater of—&#10;$250,000; or&#10;an amount that is twice the amount of the transaction that is the basis of the violation with respect to which the penalty is imposed.&#10;This violation is very straight forward. Section a explicitly states, it shall be unlawful for a person to violate, attempt to violate... With the violation incurred by the AI, the Bank would be responsible for a civil penalty that would follow.",
+                                                "question": null,
+                                                "children": null
+                                        }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "A Criminal Violation.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children":[{
+                                        "label": "Anti Terrorism Act",
+                                        "question": "What is the potential liability?",
+                                        "children": [{
+                                            "label": "Anti-Terrorism Act: Civil Actions: 18 U.S. Code §2339A and 18 U.S. Code §2339B Section 2339A and 2339B creates no private cause of action. However, 18 U.S.C. §2333 authorizes civil lawsuits for those injured in their person, property, or business by an act of international terrorism. \n Civil Remedies: 18 U.S.C. §2333(a): Any national of the United States injured in his or her person, property, or business by reason of an act of international terrorism, or his or her estate, survivors, or heirs, may sue therefor in any appropriate district court of the United States and shall recover threefold the damages he or she sustains and the cost of the suit, including attorney’s fees",
+                                            "question": null,
+                                            "children": null
+                                    }]
+                                    
+                                },
+                                        {
+                                        "label": "IEEPA & TWEA",
+                                        "question": "What is the potential liability?",
+                                        "children": [{
+                                            "label": "Bank’s Defenses for Criminal IEEPA and TWEA&#10;The Government may attempt to prosecute your bank criminally because the AI violated IEEPA or TWEA&#10;The good news is that your bank has a defense&#10;The criminal statute requires that the crime was committed “willfully”&#10;Since the reason this client was approved was because the AI gave the all clear, it would be difficult to convince any court that the bank did this “willfully.”&#10;The Supreme Court has ruled that: “To establish a 'willful' violation of a statute, the Government must prove that the defendant acted with knowledge that his conduct was unlawful.”&#10;The fact that the bank had an AI in place to prevent this from happening, in and of itself, can help to prove that the act was not committed “willfully.”",
+                                            "question": null,
+                                            "children": null
+                                    }]
+                                    }
+                                ]
+                                },
+                                {
+                                    "label": "Other.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                }
+                            ]
+                        },
+                        {
+                            "label": "A Third Party",
+                            "question": "What is the nature of the complaint?",
+                            "children": [{
+                                    "label": "Anti Terrorism Act",
+                                    "question": "What is the potential liability?",
+                                    "children": [{
+                                        "label": "Anti-Terrorism Act: Civil Actions: 18 U.S. Code §2339A and 18 U.S. Code §2339B Section 2339A and 2339B creates no private cause of action. However, 18 U.S.C. §2333 authorizes civil lawsuits for those injured in their person, property, or business by an act of international terrorism. \n Civil Remedies: 18 U.S.C. §2333(a): Any national of the United States injured in his or her person, property, or business by reason of an act of international terrorism, or his or her estate, survivors, or heirs, may sue therefor in any appropriate district court of the United States and shall recover threefold the damages he or she sustains and the cost of the suit, including attorney’s fees",
+                                        "question": null,
+                                        "children": null
+                                }]
+                                
+                            }]
+                        }
+                    ]
+                },
+                {
+                    "label": "The AI system wrongly blocked a transaction that it should have processed.",
+                    "question": "Who is the complaining party?",
+                    "children": [{
+                            "label": "The Government",
+                            "question": "What is the nature of the complaint?",
+                            "children": [{
+                                    "label": "Safety and Soundness Issue?",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                },
+                                {
+                                    "label": "Model Validation Issue?",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                }
+                            ]
+                        },
+                        {
+                            "label": "The Bank",
+                            "question": "What is the nature of the complaint?",
+                            "children": [{
+                                    "label": "Government Requires Bank to Improve Systems.  Government Fines Bank.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                },
+                                {
+                                    "label": "AI System is not Performing as Promised by the Vendor.",
+                                    "question": "What claims does the injury give rise to?",
+                                    "children": null
+                                }
+                            ]
+                        },
+                        {
+                            "label": "A Non-Client (Recepient, Third-Party, etc...)",
+                            "question": "What is the nature of the complaint?",
+                            "children": [{
+                                "label": "Transaction was Not Timely Received or not Received at All.",
+                                "question": "What claims does the injury give rise to?",
+                                "children": null
+                            }]
+                        },
+                        {
+                            "label": "The Bank's Client",
+                            "question": "What is the nature of the complaint?",
+                            "children": [{
+                                "label": "Transaction was Not Timely Processed or not Processed at All.",
+                                "question": "What claims does the injury give rise to?",
+                                "children": null
+                            }]
+                        }
+                    ]
+                }
+            ]
+}

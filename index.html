@@ -185,22 +185,6 @@
                 <b-button center id="info-button" v-b-modal="'contactInfo'">Need Additional Info?</b-button>
                 <b-row>
                     <b-col>
-                        <b-card id="desc-card" title="Past Choices" class="mb-6" v-if="myJson.label != null">
-
-                            <b-container class="button-container">
-                                <b-row v-for="selected in track">
-                                    <p class="choices-text-a"><span v-html="selected.label"></span></p>
-                                    <b-link @click='myJson = JumpBackPathQ(selected.question)' class="font-weight-bold choices-text-q"><span v-html="selected.question"></span></b-link>
-
-                                </b-row>
-                                <b-row>
-                                    <p class="choices-text-a"> <span v-html="myJson.label"></span></p>
-                                    <p class="font-weight-bold choices-text-q"> <span v-html="myJson.question"></span></p>
-                                </b-row>
-                            </b-container>
-                        </b-card>
-                    </b-col>
-                    <b-col>
                         <b-card id="tree-card" :title="myJson.question" class="mb-5">
                             <b-container class="button-container" v-for="answer in myJson.children">
                                 <b-row v-if="answer.question != null">
@@ -214,6 +198,30 @@
                             <b-container class="button-container" v-if="myJson.label != null">
                                 <b-row>
                                     <b-btn @click='myJson = removePath()' v-on:click="" class="decision-tree-back">Back</b-btn>
+                                </b-row>
+                            </b-container>
+                        </b-card>
+                    </b-col>
+                    <b-col>
+                        <b-card id="suggestion-card" title="Current Suggestions" class="mb-6">
+
+                            <b-container class="button-container">
+                                <b-row>
+                                    <p class="choices-text-a"> <span v-html="myJson.label"></span></p>
+                                </b-row>
+                            </b-container>
+                        </b-card>
+                        <b-card id="desc-card" title="Past Choices" class="mb-6" v-if="myJson.label != null">
+
+                            <b-container class="button-container">
+                                <b-row v-for="selected in track">
+                                    <p class="choices-text-a"><span v-html="selected.label"></span></p>
+                                    <b-link @click='myJson = JumpBackPathQ(selected.question)' class="font-weight-bold choices-text-q"><span v-html="selected.question"></span></b-link>
+
+                                </b-row>
+                                <b-row>
+                                    <p class="choices-text-a"> <span v-html="myJson.label"></span></p>
+                                    <p class="font-weight-bold choices-text-q"> <span v-html="myJson.question"></span></p>
                                 </b-row>
                             </b-container>
                         </b-card>

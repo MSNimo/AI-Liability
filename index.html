@@ -207,7 +207,7 @@
 
                             <b-container class="button-container">
                                 <b-row>
-                                    <p class="choices-text-a"> <span v-html="myJson.label"></span></p>
+                                    <p class="choices-text-a" v-if="myJson.suggestion != null"> <span v-html="myJson.suggestion"></span></p>
                                 </b-row>
                             </b-container>
                         </b-card>

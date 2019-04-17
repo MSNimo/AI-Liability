@@ -229,15 +229,16 @@
                         <b-card id="suggestion-card" title="Current Suggestions" class="mb-6"v-if="(counter > 0) || (myJson.suggestion != null)">
 
                             <b-container class="button-container">
-                                <ul>
-                                <b-row v-for="each in lastFew">
-                                    <p class="choices-text-a" v-if="each != null"><li><span v-html="each"></span></li></p>
-                                </b-row>
-                                </ul>
-                                <hr size="30">
                                 <b-row>
-                                    <p class="choices-text-a" v-if="myJson.suggestion != null"><b><span v-html="myJson.suggestion"><b></span></p>
+                                    <p class="choices-text-a" v-if="myJson.suggestion != null"><b><span v-html="myJson.suggestion"></span></b></p>
                                 </b-row>
+                                <hr size="30">
+                                <ul>
+                                    <b-row v-for="each in lastFew">
+                                        <p class="choices-text-a" v-if="each != null"><li><span v-html="each"></span></li></p>
+                                    </b-row>
+                                </ul>
+                                       
                             </b-container>
                         </b-card>
                     </b-col>

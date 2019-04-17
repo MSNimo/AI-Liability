@@ -23,10 +23,14 @@
 
 <style>
 
-
     #logo {
         float: right;
         padding-right: 2%;
+    }
+
+    #main-div {
+
+        padding: 0 2.5%;
     }
     #tree-card {
         max-width: 100%;
@@ -122,6 +126,10 @@
         margin-top: 10px;
     }
 
+    #boxes {
+        padding-bottom: 10%;
+    }
+
     #footer-text {
 
         align-content: center;
@@ -179,40 +187,13 @@
                     <p class="h6"> Artificial Intelligence sanctions screening system. </p>
                 </div>
         </b-jumbotron>
-        <b-container>
-            <div>
+        <b-container-fluid>
+            <div id = "main-div">
                 <!--button for modal-->
                 <b-button center id="info-button" v-b-modal="'contactInfo'">Need Additional Info?</b-button>
-                <b-row>
+                <b-row id = "boxes">
                     <b-col>
-                        <b-card id="tree-card" :title="myJson.question" class="mb-5">
-                            <b-container class="button-container" v-for="answer in myJson.children">
-                                <b-row v-if="answer.question != null">
-                                    <b-btn @click='addPath(myJson)' v-on:click="myJson=answer" class="decision-tree-option"><span v-html="answer.label"></span></b-btn>
-                                </b-row>
-                                <b-row  v-if="answer.question == null">
-                                    <p class="text-justify"><span v-html="answer.label"></span></p>
-                                </b-row>
-                            </b-container>
-
-                            <b-container class="button-container" v-if="myJson.label != null">
-                                <b-row>
-                                    <b-btn @click='myJson = removePath()' v-on:click="" class="decision-tree-back">Back</b-btn>
-                                </b-row>
-                            </b-container>
-                        </b-card>
-                    </b-col>
-                    <b-col>
-                        <b-card id="suggestion-card" title="Current Suggestions" class="mb-6">
-
-                            <b-container class="button-container">
-                                <b-row>
-                                    <p class="choices-text-a" v-if="myJson.suggestion != null"> <span v-html="myJson.suggestion"></span></p>
-                                </b-row>
-                            </b-container>
-                        </b-card>
                         <b-card id="desc-card" title="Past Choices" class="mb-6" v-if="myJson.label != null">
-
                             <b-container class="button-container">
                                 <b-row v-for="selected in track">
                                     <p class="choices-text-a"><span v-html="selected.label"></span></p>
@@ -226,7 +207,42 @@
                             </b-container>
                         </b-card>
                     </b-col>
+                    <b-col>
+                        <b-card id="tree-card" :title="myJson.question" class="mb-5">
+                            <b-container class="button-container" v-for="answer in myJson.children">
+                                <b-row v-if="answer.question != null">
+                                    <b-btn @click='addPath(myJson); counter = count(suggestions);lastFew = last_few(suggestions,myJson);' v-on:click="myJson=answer" class="decision-tree-option"><span v-html="answer.label"></span></b-btn>
+                                </b-row>
+                                <b-row  v-if="answer.question == null">
+                                    <p class="text-justify"><span v-html="answer.label"></span></p>
+                                </b-row>
+                            </b-container>
+
+                            <b-container class="button-container" v-if="myJson.label != null">
+                                <b-row>
+                                    <b-btn @click='myJson = removePath(); counter = count(suggestions);lastFew = last_few(suggestions,myJson);' v-on:click="" class="decision-tree-back">Back</b-btn>
+                                </b-row>
+                            </b-container>
+                        </b-card>
+                    </b-col>
+                    <b-col>
+                        <b-card id="suggestion-card" title="Current Suggestions" class="mb-6"v-if="(counter > 0) || (myJson.suggestion != null)">
+
+                            <b-container class="button-container">
+                                <ul>
+                                <b-row v-for="each in lastFew">
+                                    <p class="choices-text-a" v-if="each != null"><li><span v-html="each"></span></li></p>
+                                </b-row>
+                                </ul>
+                                <hr size="30">
+                                <b-row>
+                                    <p class="choices-text-a" v-if="myJson.suggestion != null"><b><span v-html="myJson.suggestion"><b></span></p>
+                                </b-row>
+                            </b-container>
+                        </b-card>
+                    </b-col>
                 </b-row>
+
             </div>
             <!--modal for contant info-->
             <b-modal ref="contactInfoRef" id="contactInfo" size="md" title="Contact Info" ok-only>
@@ -241,25 +257,56 @@
                     else associated with LANA. The advise arising from LANA does not constitute legal advice.
             </p>
         </div>
-        </b-container>
+        </b-container-fluid>
     </div>
 
     <!-- Start running your app -->
-    <script>
+    <script> 
         window.app = new Vue({
             el: "#app",
             data: {
                 name: '',
                 myJson: [],
-
-                track: []
+                track: [],
+                suggestions: [],
+                lastFew: [],
+                counter: 0
             },
             methods: {
+                count(array) {
+                    temp = 0 
+                    for (element in array) {
+                        if (array[element] != null) temp ++;
+                    }
+                    return temp;
+                },
+                last_few(array, json) {
+                    limit = 0;
+                    console.log(json.suggestion)
+                    if (json.suggestion != null) limit = 2;
+                    else limit = 3;
+
+                    rev = array.slice().reverse();
+                    i = 0;
+                    l2rev = [];
+
+                    for (element in array){
+                        if (rev[element] != null) {
+                            l2rev.push(rev[element]);
+                                if (rev[element] == json.suggestion) limit ++;
+                                i++;
+                        }
+                        if (i == limit) break;
+                    }
+                    return l2rev.slice().reverse();
+                },
                 addPath(json) {
                     this.track.push(json);
+                    this.suggestions.push(json.suggestion);
+
                 },
                 removePath() {
-
+                    this.suggestions.pop();
                     return this.track.pop();
                 },
                 JumpBackPathQ(target) {
